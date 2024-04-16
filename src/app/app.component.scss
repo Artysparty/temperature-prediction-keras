@@ -1,0 +1,22 @@
+.preview {
+  max-width: 200px;
+}
+
+.dropzone {
+  border: 1px dotted gainsboro;
+  padding: 16px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+
+  .dropzone_btn {
+    display: none;
+  }
+}
+
+.card {
+  max-width: auto;;
+}

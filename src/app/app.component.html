@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <span>Индикатор повреждений</span>
+</mat-toolbar>
+
+<div class="d-flex justify-content-center">
+  <mat-card class="card mt-4">
+    <mat-card-content class="d-flex p-4 align-items-center">
+      <label class="dropzone me-4">
+        <input class="dropzone_btn" type="file" accept="image/*" (change)="selectFile($event)" />
+        <span *ngIf="!preview" class="me-2">Выберите фотографию с тепловизора</span>
+        <mat-icon *ngIf="!preview" aria-hidden="false" fontIcon="image"></mat-icon>
+  
+        <div *ngIf="preview">
+          <img [src]="preview" class="preview">
+        </div>
+      </label>
+
+      <button
+        mat-stroked-button
+        color="primary"
+        [disabled]="!selectedFiles"
+        (click)="upload()"
+      >
+        Загрузить
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
